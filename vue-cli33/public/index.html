@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div style="width: 300px;height: 300px;background-color: #ccc;justify-items: center;display: flex;justify-content: center;align-items: center;">
+      <div style="width: 100px;height: 100px;background: #000;">asdasdd</div>
+    </div>
+    <div style="width: 300px;height: 300px;background-color: #ccc;">
+      <div style="width: 100px;height: 100px;background: #000;">asdasdd</div>
+    </div>
+    <div style="width: 300px;height: 300px;background-color: #ccc;">
+      <p style="line-height: 300px;text-align: center;">asdasdwdasdasdwdasdasd</p>
+    </div>
+    <div style="width:400px;height:200px;">
+      <span style="float: left ;width: auto;height :100%;">
+          <i style="position: absolute;float: left ;width: 100px;height:50px; ">hello</i>
+      </span>
+  </div>
+    <a download href="../src/assets/project.zip">asdasdasd</a>
+    <a download href="../src/assets/勇豪重构.zip">asdasdasd</a>
+    <ul class="authors" id="favorite" >
+      <li> <span> Martin Fowler</span> </li>
+      <li id= "related" > <span class= "highlight" >Djkstra</span> </1i>
+  </ul>
+    <div id="app"></div>
+    <style>
+      ul#related span {
+        color: red;
+      }
+      #favorite .highlight {
+          color: orange;
+      }
+      .highlight {
+      color: black;
+      }
+      #container {
+          width: 200px;
+          height: 200px;
+          padding: 20px;
+          margin: 20px;
+          border: solide 10px black;
+      }
+      </style>
+    <div id="container">
+      content
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+  <!-- <script src="../src/assets/js/jiegou.js"></script> -->
+  <!-- <script src="../src/assets/js/MyPromise.js"></script> -->
+  <!-- <script src="../src/assets/js/MyClass.js"></script> -->
+  <!-- <script src="../src/assets/js/MyArray.js"></script> -->
+  <script>
+
+    // quchong
+    // var arr = [2,4,6,5,2,3,4,567,58]
+    // let obj = {};
+    // // console.log(Array.from(new Set(arr)))
+    // for(var i=0; i<arr.length-1;i++) {
+    //   if(!obj[arr[i]]) {
+    //     obj[arr[i]] = true;
+    //   }
+    // }
+    // console.log(obj)
+    // console.log(Object.keys(obj))
+
+
+    var arr = [-1,23,1,6,5,7,8,1]
+    var n = arr.length
+    for(let i = 0; i < n; i++) {
+      for (let j = 0; j < n -i - 1; j++) {
+        if (arr[j + 1] < arr[j]) {
+          let t = arr[j];
+                     arr[j] = arr[j+1];
+                     arr[j+1] = t;
+                 }
+      }
+    }
+    // for (var i = 0; i < arr.length -1; i++) {
+    //   for (var j = 0; j < arr.length- 1 - i; j++) {
+    //     if (arr[j].a > arr[j+1].a) {
+    //       let temp = arr[j];
+    //       arr[j] = arr[j+1];
+    //       arr[j+1] = temp
+    //     }
+    //   }
+    // }
+    console.log(arr);
+    
+// function selectionSort(arr) {
+
+//   for (var i = 0; i< arr.length - 1; i++) {
+//     let minIndex = i;
+//     for(var j = i + 1; j < arr.length; j++) {
+//       if (arr[j].a < arr[minIndex].a) {
+//         minIndex = j;
+//       }
+//     }
+//     let temp = arr[minIndex];
+//     arr[minIndex] = arr[i];
+//     arr[i] = temp;
+//   }
+//   return arr
+
+
+
+
+
+    // let len = arr.length;
+    // for (let i = 0; i < len - 1; i++) {
+    //     // 找到从i到数组末尾的最小元素的索引
+    //     let minIndex = i;
+    //     for (let j = i + 1; j < len; j++) {
+    //         if (arr[j] < arr[minIndex]) {
+    //             minIndex = j;
+    //         }
+    //     }
+    //     // 将最小元素与当前位置的元素交换位置
+    //     let temp = arr[minIndex];
+    //     arr[minIndex] = arr[i];
+    //     arr[i] = temp;
+    // }
+    // return arr;
+// }
+ 
+// 测试代码
+// let arr1 =  [{a:1},{a:-1},{a:5},{a:8},{a:2}];
+// console.log(selectionSort(arr1)); // 输出: [11, 12, 22, 25, 64]
+    // sort排序
+    // arr.sort((a,b) => {
+    //   return a-b
+    // })
+    // promise!!!!!!!!
+    // var aa = new Promise((resolve, reject)=> {
+    //   console.log(this,1);
+    //   setTimeout(()=>{
+    //     console.log(123);
+    //     console.log(this,2);
+    //     resolve({vv: 3});
+    //   },0)
+    // }).then(res =>{
+    //   console.log(res, 222)
+    // })
+    // console.log(aa)
+    // class myPromise {
+    //   #asd = '123';
+    //   constructor(option) {
+    //     this.a = option.a
+    //   }
+    //   haha() {
+    //     console.log(this,3);
+    //   }
+    // }
+    // var pro = new myPromise({a:234});
+
+
+    // 继承！！！！
+  </script>
+</html>
